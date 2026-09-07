@@ -1,0 +1,53 @@
+---
+import { getCollection, render } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogLayout
+  title={post.data.title}
+  description={post.data.description}
+>
+  <article class="post">
+    <header class="post-header">
+      <time datetime={post.data.pubDate.toISOString()}>
+        {post.data.pubDate.toLocaleDateString('it-IT', {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric',
+        })}
+      </time>
+
+      <h1>{post.data.title}</h1>
+
+      <p class="post-description">
+        {post.data.description}
+      </p>
+    </header>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <div class="tags">
+        {post.data.tags.map((tag) => (
+          <a href={`/tags/${tag}`}>#{tag}</a>
+        ))}
+      </div>
+
+      <a class="back-link" href="/">← Torna agli articoli</a>
+    </footer>
+  </article>
+</BlogLayout>

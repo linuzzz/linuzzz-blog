@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../layouts/BlogLayout.astro';
+
+const posts = await getCollection('posts');
+
+posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BlogLayout title="Il mio blog">
+  <section class="intro">
+    <!-- <p class="eyebrow">Articoli Recenti</p> -->
+    <h1>Sfoghi e opensource</h1>
+  </section>
+
+  <section class="post-list">
+    {posts.map((post) => (
+      
+    <article class="post-preview">
+    <div class="post-meta">
+      <time datetime={post.data.pubDate.toISOString()}>
+        {post.data.pubDate.toLocaleDateString('it-IT', {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric',
+        })}
+      </time>
+
+      <div class="tags">
+        {post.data.tags.map((tag) => (
+          <a href={`/tags/${tag}`}>#{tag}</a>
+        ))}
+      </div>
+    </div>
+
+    <h2>
+      <a href={`/posts/${post.id}`}>
+        {post.data.title}
+      </a>
+    </h2>
+
+    <!--
+    <p class="description">
+      {post.data.description}
+    </p>
+    -->
+
+</article>
+      
+    ))}
+  </section>
+</BlogLayout>

@@ -1,0 +1,13 @@
+---
+title: 'In ginocchio da te'
+description: ''
+pubDate: 'Feb 07 2026'
+tags: ["cinema", "italia", "corruzione", "società"]
+---
+
+Ho visto da poco e per la prima volta “In ginocchio da te”, film del 1964 con Gianni Morandi.
+
+Il padre della protagonista è un maresciallo dell'esercito che consegna alle nuove reclute delle divise troppo grandi suggerendo loro di portarle ad aggiustare in una sartoria vicina alla caserma gestita dalla moglie e dalla figlia. Siamo negli anni '60, gli anni del boom economico, ancora qualche anno e tensioni e conflitti sociali esploderanno in Italia come in altre parti del mondo. Il regista porta il pubblico a simpatizzare per il maresciallo perché se è vero che all'inizio cerca di contrastare l'amore della figlia per la recluta-cantante alla fine cede alle doti canore del futuro genero a quanto pare sinceramente innamorato: l'ufficiale è un uomo attaccato alla famiglia, simpatico ed in definitiva una figura positiva. Il messaggio è chiaro e lampante: la corruzione non è un reato così grave, siamo italiani, dobbiamo arrangiarci, ci siamo ripresi dalla secondo guerra mondiale ed insomma...cosa sarà mai. Da lì a tangentopoli è un attimo... è fare germogliare una società dove è lecito cercare di arrotondare, ammesso che si tratti di *arrotondamento* e non di raddoppiare o triplicare lo stipendio visto il giro di affari della sartoria. Se i trapper di adesso sono tutti soldi, droga e bitches forse per un pezzetto è anche merito di Gianni Morandi, perché alla fine quello conta: i soldi.
+
+Veniamo adesso alla storia d'amore: la recluta-cantante Gianni si innamora di Carla e sono tanto teneri...fino ad una sera in cui lui va a cantare ad una festa di persone che definiremo “benestanti”. La padrona di casa vuole farsi un giro con questo giovanotto dalla bella voce e lui ci casca: dopo 4 giorni alle isole Eolie mantenuto da lei le chiede di sposarla. Ma la ricca e viziata signorina non è ovviamente minimamente interessata...e cosa fa lui? Torna con la coda tra le gambe, aka in ginocchio da te, chiedendo perdono a Carla... ma dico... 2 minuti prima volevi sposare un'altra donna e adesso canti una canzone alla radio e nasce il vero amore perché quello di prima era finto? Ma sono queste le basi per l'educazione sentimentale della generazione di adolescenti cresciuta negli anni '60? Volendo essere realistici il futuro sposo cantante quanto ci metterà a tradire la povera Carla che nel frattempo avrà messo al mondo due bambini? Uno così sarebbe meglio perderlo che trovarlo ma vabbé, canta così bene, dopo la corruzione sdoganiamo anche le relazioni tossiche.
+

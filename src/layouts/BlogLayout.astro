@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Old style blog' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav>
+        <a class="site-title" href="/">Old style blog</a>
+        <a class="nav-link" href="/tags/">Tags</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer"> 
+    <span>© 2026 Linuzzz</span> 
+    <nav class="social-links" aria-label="Social"> 
+    <a href="https://infosec.exchange/@linuzzz" rel="me"> Mastodon </a> 
+    <a href="https://pixelfed.social/paolinus"> Pixelfed </a> 
+    </nav> 
+    </footer>
+
+  </body>
+
+  </html>

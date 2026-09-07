@@ -1,0 +1,73 @@
+```astro
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  const tags = new Set(
+    posts.flatMap((post) => post.data.tags)
+  );
+
+  return [...tags].map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+
+const posts = await getCollection('posts', ({ data }) =>
+  data.tags.includes(tag)
+);
+
+posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BlogLayout title={`Tag: ${tag}`}>
+  <section class="tag-page">
+    <header class="tag-page-header">
+      <p class="eyebrow">TAG</p>
+      <h1>#{tag}</h1>
+      <p>
+        {posts.length} {posts.length === 1 ? 'articolo' : 'articoli'}
+      </p>
+    </header>
+
+    <section class="tag-posts">
+      {posts.map((post) => (
+        <article class="post-preview">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toLocaleDateString('it-IT', {
+              day: '2-digit',
+              month: 'long',
+              year: 'numeric',
+            })}
+          </time>
+
+          <h2>
+            <a href={`/posts/${post.id}`}>
+              {post.data.title}
+            </a>
+          </h2>
+
+          <p class="description">
+            {post.data.description}
+          </p>
+
+          <div class="tags">
+            {post.data.tags.map((postTag) => (
+              <a href={`/tags/${postTag}`}>#{postTag}</a>
+            ))}
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <a class="back-link" href="/tags/">← Tutti i tag</a>
+  </section>
+</BlogLayout>
+```
